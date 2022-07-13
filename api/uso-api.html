@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Uso de la API</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/documentation.github.io/assets/css/0.styles.d4296b04.css" as="style"><link rel="preload" href="/documentation.github.io/assets/js/app.c9d3f325.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/2.7e8b5cf7.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/13.fc21ea81.js" as="script"><link rel="prefetch" href="/documentation.github.io/assets/js/10.96269606.js"><link rel="prefetch" href="/documentation.github.io/assets/js/11.f4ef038d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/12.f3f06b7d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/14.606673e5.js"><link rel="prefetch" href="/documentation.github.io/assets/js/15.98ea0700.js"><link rel="prefetch" href="/documentation.github.io/assets/js/16.5caa4a71.js"><link rel="prefetch" href="/documentation.github.io/assets/js/17.f3349bf3.js"><link rel="prefetch" href="/documentation.github.io/assets/js/18.b8736fd4.js"><link rel="prefetch" href="/documentation.github.io/assets/js/3.d2fa742c.js"><link rel="prefetch" href="/documentation.github.io/assets/js/4.8e022cfe.js"><link rel="prefetch" href="/documentation.github.io/assets/js/5.6c6f820d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/6.f5002f39.js"><link rel="prefetch" href="/documentation.github.io/assets/js/7.0927b680.js"><link rel="prefetch" href="/documentation.github.io/assets/js/8.a023f38b.js"><link rel="prefetch" href="/documentation.github.io/assets/js/9.9177e5a5.js">
+    <link rel="stylesheet" href="/documentation.github.io/assets/css/0.styles.d4296b04.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation.github.io/" class="home-link router-link-active"><img src="/documentation.github.io/assets/img/logo_naranja.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link router-link-active">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link">
+  Frontend
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link router-link-active">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link">
+  Frontend
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Rest Api</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation.github.io/api/construccion.html" class="sidebar-link">Construcción</a></li><li><a href="/documentation.github.io/api/keep-alive.html" class="sidebar-link">Keep Alive Strategy</a></li><li><a href="/documentation.github.io/api/sql-inyection.html" class="sidebar-link">Prevenir Sql Inyection</a></li><li><a href="/documentation.github.io/api/deployment.html" class="sidebar-link">Deployment</a></li><li><a href="/documentation.github.io/api/uso-api.html" aria-current="page" class="active sidebar-link">Uso de la API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation.github.io/api/uso-api.html#endpoint-products" class="sidebar-link">EndPoint /products</a></li><li class="sidebar-sub-header"><a href="/documentation.github.io/api/uso-api.html#endpoint-categories" class="sidebar-link">EndPoint /categories</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Frontend</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="uso-de-la-api"><a href="#uso-de-la-api" class="header-anchor">#</a> Uso de la API</h1> <h2 id="endpoint-products"><a href="#endpoint-products" class="header-anchor">#</a> EndPoint /products</h2> <p>Este endpoint devuelve la siguiente estructura JSON; &quot;totalItems&quot; indica el total de productos que existen con el filtro, &quot;totalPages&quot; la cantidad de paginas de ocho productos cada una, &quot;currentPage&quot; la pagina actual a la que se hizo el request y &quot;products&quot; que muestra un array de productos como resultado de la consulta. Si no se le envía ningún parametro al endpoint se devolverán todas los productos.</p> <div class="language- extra-class"><pre class="language-text"><code>    {
+        &quot;totalItems&quot;: ,
+        &quot;totalPages&quot;: 8,
+        &quot;currentPage&quot;: 0,
+        &quot;products&quot;: [
+            {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;ENERGETICA MR BIG&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg&quot;,
+                &quot;price&quot;: 1490.0,
+                &quot;discount&quot;: 20,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            }
+        ]
+    }
+</code></pre></div><h3 id="parametro-prodcuts-category"><a href="#parametro-prodcuts-category" class="header-anchor">#</a> Parametro /prodcuts?category</h3> <p>Este parametro permite filtrar los productos por categoría. De igual forma si se agrega el parámetro adicional pageNo, que empieza en 0 siendo 0 la primera página, se devolverá la pagina solicitada.</p> <p>Ejemplo:</p> <p>API</p> <div class="language- extra-class"><pre class="language-text"><code>    http://34.205.223.61:8080/products?category=2&amp;pageNo=2
+</code></pre></div><p>RESPONSE</p> <div class="language- extra-class"><pre class="language-text"><code>    {
+        &quot;totalItems&quot;: 21,
+        &quot;totalPages&quot;: 3,
+        &quot;currentPage&quot;: 2,
+        &quot;products&quot;: [
+            {
+                &quot;id&quot;: 88,
+                &quot;name&quot;: &quot;PISCO MISTRAL GRAN NOBEL 40°&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/grannobel9104.jpg&quot;,
+                &quot;price&quot;: 19900.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;pisco&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 89,
+                &quot;name&quot;: &quot;PISCO MISTRAL 40°&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/409346.jpg&quot;,
+                &quot;price&quot;: 4990.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;pisco&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 90,
+                &quot;name&quot;: &quot;PISCO MISTRAL 46°&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/469463.jpg&quot;,
+                &quot;price&quot;: 7890.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;pisco&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 91,
+                &quot;name&quot;: &quot;PISCO MISTRAL NOBEL 40°&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg&quot;,
+                &quot;price&quot;: 19990.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;pisco&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 92,
+                &quot;name&quot;: &quot;PISCO MISTRAL NOBEL 46&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/nobelanejado9639.jpg&quot;,
+                &quot;price&quot;: 15990.0,
+                &quot;discount&quot;: 15,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;pisco&quot;
+                }
+            }
+        ]
+    }
+</code></pre></div><h3 id="parametro-prodcuts-text"><a href="#parametro-prodcuts-text" class="header-anchor">#</a> Parametro /prodcuts?text</h3> <p>Este parametro permite filtrar los productos por texto de búsqueda. De igual forma si se agrega el parámetro adicional pageNo, que empieza en 0 siendo 0 la primera página, se devolverá la pagina solicitada.</p> <p>Ejemplo:</p> <p>API</p> <div class="language- extra-class"><pre class="language-text"><code>    http://34.205.223.61:8080/products?text=bebida&amp;pageNo=0
+</code></pre></div><p>RESPONSE</p> <div class="language- extra-class"><pre class="language-text"><code>    {
+    &quot;totalItems&quot;: 1,
+    &quot;totalPages&quot;: 1,
+    &quot;currentPage&quot;: 0,
+    &quot;products&quot;: [
+        {
+            &quot;id&quot;: 68,
+            &quot;name&quot;: &quot;Bebida Sprite 1 Lt&quot;,
+            &quot;url_image&quot;: null,
+            &quot;price&quot;: 1250.0,
+            &quot;discount&quot;: 10,
+            &quot;category&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;bebida&quot;
+            }
+        }
+    ]
+}
+</code></pre></div><h3 id="parametro-prodcuts-minprice-maxprice"><a href="#parametro-prodcuts-minprice-maxprice" class="header-anchor">#</a> Parametro /prodcuts?minPrice=&amp;maxPrice=</h3> <p>Estos parametros permiten filtrar los productos por rango de precios. De igual forma si se agrega el parámetro adicional pageNo, que empieza en 0 siendo 0 la primera página, se devolverá la pagina solicitada.</p> <p>Ejemplo:</p> <p>API</p> <div class="language- extra-class"><pre class="language-text"><code>    http://34.205.223.61:8080/products?minPrice=1000&amp;maxPrice=2000&amp;pageNo=0
+</code></pre></div><p>RESPONSE</p> <div class="language- extra-class"><pre class="language-text"><code>    {
+        &quot;totalItems&quot;: 17,
+        &quot;totalPages&quot;: 3,
+        &quot;currentPage&quot;: 0,
+        &quot;products&quot;: [
+            {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;ENERGETICA MR BIG&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg&quot;,
+                &quot;price&quot;: 1490.0,
+                &quot;discount&quot;: 20,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;ENERGETICA RED BULL&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/redbull8381.jpg&quot;,
+                &quot;price&quot;: 1490.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;ENERGETICA SCORE&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/logo7698.png&quot;,
+                &quot;price&quot;: 1290.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 34,
+                &quot;name&quot;: &quot;ENERGETICA MONSTER RIPPER&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/mosterriper0436.jpg&quot;,
+                &quot;price&quot;: 1990.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 35,
+                &quot;name&quot;: &quot;ENERGETICA MAKKA DRINKS&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/makka-drinks-250ml0455.jpg&quot;,
+                &quot;price&quot;: 1190.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 36,
+                &quot;name&quot;: &quot;ENERGETICA MONSTER VERDE&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/monsterverde0476.jpg&quot;,
+                &quot;price&quot;: 1990.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;bebida energetica&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 37,
+                &quot;name&quot;: &quot;COCA COLA ZERO DESECHABLE&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/cocazero9766.jpg&quot;,
+                &quot;price&quot;: 1490.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 4,
+                    &quot;name&quot;: &quot;bebida&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 48,
+                &quot;name&quot;: &quot;SPRITE 1 1/2 Lts&quot;,
+                &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/sprite-lata-33cl5575.jpg&quot;,
+                &quot;price&quot;: 1500.0,
+                &quot;discount&quot;: 0,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 4,
+                    &quot;name&quot;: &quot;bebida&quot;
+                }
+            }
+        ]
+    }
+</code></pre></div><h2 id="endpoint-categories"><a href="#endpoint-categories" class="header-anchor">#</a> EndPoint /categories</h2> <p>Este endpoint devuelve todas las categorias con la siguiente estructura JSON; &quot;id&quot; indica el identificador de la categoría y &quot;name&quot; el nombre de la categoría. Este endpoint no admite parámetros, ya que sólo envía todos las categorías que existen en la base de datos.</p> <p>RESPONSE</p> <div class="language- extra-class"><pre class="language-text"><code>    [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;bebida energetica&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;pisco&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;ron&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;bebida&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;snack&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;cerveza&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;vodka&quot;
+        }
+    ]
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation.github.io/api/deployment.html" class="prev">
+        Deployment
+      </a></span> <span class="next"><a href="/documentation.github.io/frontend/construccion.html">
+        Construcción
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation.github.io/assets/js/app.c9d3f325.js" defer></script><script src="/documentation.github.io/assets/js/2.7e8b5cf7.js" defer></script><script src="/documentation.github.io/assets/js/13.fc21ea81.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Validaciones y Alertas</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/documentation.github.io/assets/css/0.styles.d4296b04.css" as="style"><link rel="preload" href="/documentation.github.io/assets/js/app.c9d3f325.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/2.7e8b5cf7.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/18.b8736fd4.js" as="script"><link rel="prefetch" href="/documentation.github.io/assets/js/10.96269606.js"><link rel="prefetch" href="/documentation.github.io/assets/js/11.f4ef038d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/12.f3f06b7d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/13.fc21ea81.js"><link rel="prefetch" href="/documentation.github.io/assets/js/14.606673e5.js"><link rel="prefetch" href="/documentation.github.io/assets/js/15.98ea0700.js"><link rel="prefetch" href="/documentation.github.io/assets/js/16.5caa4a71.js"><link rel="prefetch" href="/documentation.github.io/assets/js/17.f3349bf3.js"><link rel="prefetch" href="/documentation.github.io/assets/js/3.d2fa742c.js"><link rel="prefetch" href="/documentation.github.io/assets/js/4.8e022cfe.js"><link rel="prefetch" href="/documentation.github.io/assets/js/5.6c6f820d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/6.f5002f39.js"><link rel="prefetch" href="/documentation.github.io/assets/js/7.0927b680.js"><link rel="prefetch" href="/documentation.github.io/assets/js/8.a023f38b.js"><link rel="prefetch" href="/documentation.github.io/assets/js/9.9177e5a5.js">
+    <link rel="stylesheet" href="/documentation.github.io/assets/css/0.styles.d4296b04.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation.github.io/" class="home-link router-link-active"><img src="/documentation.github.io/assets/img/logo_naranja.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link router-link-active">
+  Frontend
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link router-link-active">
+  Frontend
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Rest Api</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Frontend</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation.github.io/frontend/construccion.html" class="sidebar-link">Construcción</a></li><li><a href="/documentation.github.io/frontend/estilos.html" class="sidebar-link">Estilos</a></li><li><a href="/documentation.github.io/frontend/validaciones-alertas.html" aria-current="page" class="active sidebar-link">Validaciones y Alertas</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation.github.io/frontend/validaciones-alertas.html#validar-inputs-de-rango-de-precios" class="sidebar-link">Validar inputs de rango de precios</a></li><li class="sidebar-sub-header"><a href="/documentation.github.io/frontend/validaciones-alertas.html#validar-que-el-mismo-producto-no-se-agregue-dos-veces-al-carrito" class="sidebar-link">Validar que el mismo producto no se agregue dos veces al carrito</a></li></ul></li><li><a href="/documentation.github.io/frontend/deployment.html" class="sidebar-link">Deployment</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="validaciones-y-alertas"><a href="#validaciones-y-alertas" class="header-anchor">#</a> Validaciones y Alertas</h1> <h2 id="validar-inputs-de-rango-de-precios"><a href="#validar-inputs-de-rango-de-precios" class="header-anchor">#</a> Validar inputs de rango de precios</h2> <h3 id="alerta-minprice-y-maxprice-deben-tener-un-valor-mayor-a-cero"><a href="#alerta-minprice-y-maxprice-deben-tener-un-valor-mayor-a-cero" class="header-anchor">#</a> Alerta minPrice y maxPrice deben tener un valor mayor a cero</h3> <p>Al hacer click en el botón &quot;Filtrar&quot; antes de obtener los productos filtrados por el rango de precios se valida que el minPrice y maxPrice no sean negativos y sean mayor a cero caso contrario se muestra una alerta.</p> <div class="language- extra-class"><pre class="language-text"><code>//Validar si min_price tiene valor diferente a null y sea mayor a cero
+    if (!min_price || !max_price || min_price&lt;0 || max_price&lt;0) {
+        Swal.fire({
+            position: 'top-end',
+            background: '#D20505',
+            customClass: 'swal-small',
+            title: 'Ingresar el precio mínimo y máximo mayor igual a cero!',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        return
+    }
+</code></pre></div><h3 id="alerta-minprice-es-mayot-a-maxprice"><a href="#alerta-minprice-es-mayot-a-maxprice" class="header-anchor">#</a> Alerta minPrice es mayot a maxPrice</h3> <p>Al hacer click en el botón &quot;Filtrar&quot; antes de obtener los productos filtrados por el rango de precios se valida que el minPrice sea menor o igual maxPrice caso contrario salta una alerta de error.</p> <div class="language- extra-class"><pre class="language-text"><code>//Validar que min price sea menor o igual que max price 
+    if (parseInt(max_price) &lt; parseInt(min_price)) {
+        Swal.fire({
+            position: 'top-end',
+            background: '#D20505',
+            customClass: 'swal-small',
+            title: 'El precio mínimo debe ser menor al precio máximo!',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        return
+    } 
+</code></pre></div><h2 id="validar-que-el-mismo-producto-no-se-agregue-dos-veces-al-carrito"><a href="#validar-que-el-mismo-producto-no-se-agregue-dos-veces-al-carrito" class="header-anchor">#</a> Validar que el mismo producto no se agregue dos veces al carrito</h2> <h3 id="alerta-producto-ya-ha-sido-anadido-al-carrito"><a href="#alerta-producto-ya-ha-sido-anadido-al-carrito" class="header-anchor">#</a> Alerta producto ya ha sido añadido al carrito</h3> <p>Al hacer click en &quot;Añadir a carrito&quot; de un producto se valida que este producto no se encuentre ya en el carrito caso contrario se muestra una alerta.</p> <div class="language- extra-class"><pre class="language-text"><code>    //Validar que el producto no haya sido añadido previamente
+    let productInCart = cartProducts.find(p =&gt; p.id === productId);
+    if (productInCart) {
+        Swal.fire({
+            position: 'top-left',
+            background: '#FF5733',
+            customClass: 'swal-small-cart',
+            title: 'Este producto ya fue añadido al carrito!',
+            showConfirmButton: false,
+            timer: 1300
+        });
+        return;
+    }
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation.github.io/frontend/estilos.html" class="prev">
+        Estilos
+      </a></span> <span class="next"><a href="/documentation.github.io/frontend/deployment.html">
+        Deployment
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation.github.io/assets/js/app.c9d3f325.js" defer></script><script src="/documentation.github.io/assets/js/2.7e8b5cf7.js" defer></script><script src="/documentation.github.io/assets/js/18.b8736fd4.js" defer></script>
+  </body>
+</html>

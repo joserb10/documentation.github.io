@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deployment</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/documentation.github.io/assets/css/0.styles.d4296b04.css" as="style"><link rel="preload" href="/documentation.github.io/assets/js/app.c9d3f325.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/2.7e8b5cf7.js" as="script"><link rel="preload" href="/documentation.github.io/assets/js/10.96269606.js" as="script"><link rel="prefetch" href="/documentation.github.io/assets/js/11.f4ef038d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/12.f3f06b7d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/13.fc21ea81.js"><link rel="prefetch" href="/documentation.github.io/assets/js/14.606673e5.js"><link rel="prefetch" href="/documentation.github.io/assets/js/15.98ea0700.js"><link rel="prefetch" href="/documentation.github.io/assets/js/16.5caa4a71.js"><link rel="prefetch" href="/documentation.github.io/assets/js/17.f3349bf3.js"><link rel="prefetch" href="/documentation.github.io/assets/js/18.b8736fd4.js"><link rel="prefetch" href="/documentation.github.io/assets/js/3.d2fa742c.js"><link rel="prefetch" href="/documentation.github.io/assets/js/4.8e022cfe.js"><link rel="prefetch" href="/documentation.github.io/assets/js/5.6c6f820d.js"><link rel="prefetch" href="/documentation.github.io/assets/js/6.f5002f39.js"><link rel="prefetch" href="/documentation.github.io/assets/js/7.0927b680.js"><link rel="prefetch" href="/documentation.github.io/assets/js/8.a023f38b.js"><link rel="prefetch" href="/documentation.github.io/assets/js/9.9177e5a5.js">
+    <link rel="stylesheet" href="/documentation.github.io/assets/css/0.styles.d4296b04.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation.github.io/" class="home-link router-link-active"><img src="/documentation.github.io/assets/img/logo_naranja.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link router-link-active">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link">
+  Frontend
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation.github.io/" class="nav-link">
+  Inicio
+</a></div><div class="nav-item"><a href="/documentation.github.io/api/" class="nav-link router-link-active">
+  Rest Api
+</a></div><div class="nav-item"><a href="/documentation.github.io/frontend/" class="nav-link">
+  Frontend
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Rest Api</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation.github.io/api/construccion.html" class="sidebar-link">Construcción</a></li><li><a href="/documentation.github.io/api/keep-alive.html" class="sidebar-link">Keep Alive Strategy</a></li><li><a href="/documentation.github.io/api/sql-inyection.html" class="sidebar-link">Prevenir Sql Inyection</a></li><li><a href="/documentation.github.io/api/deployment.html" aria-current="page" class="active sidebar-link">Deployment</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation.github.io/api/deployment.html#aws-instance" class="sidebar-link">AWS Instance</a></li><li class="sidebar-sub-header"><a href="/documentation.github.io/api/deployment.html#configuracion-de-entorno-virtual-ubuntu" class="sidebar-link">Configuración de entorno virtual Ubuntu</a></li><li class="sidebar-sub-header"><a href="/documentation.github.io/api/deployment.html#uso-de-systemd-service-para-deploy-de-app-spring-boot" class="sidebar-link">Uso de Systemd Service para deploy de app spring boot</a></li><li class="sidebar-sub-header"><a href="/documentation.github.io/api/deployment.html#activacion-y-monitoreo-de-logs-y-la-aplicacion" class="sidebar-link">Activación y Monitoreo de logs, y la aplicación</a></li></ul></li><li><a href="/documentation.github.io/api/uso-api.html" class="sidebar-link">Uso de la API</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Frontend</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="deployment"><a href="#deployment" class="header-anchor">#</a> Deployment</h1> <h2 id="aws-instance"><a href="#aws-instance" class="header-anchor">#</a> AWS Instance</h2> <p>Para el despliegue de la aplicación se usó amazon web services con una cuenta gratuita, donde se lanzó una instancia EC2 con el sistema operativo Ubuntu, se activo los puertos http, https, para todos los origenes de forma que la api se accesibles. Así también se configuró una ip elástica para la instancia, de tal modo que al reiniciar la instancia no se modifique la ipv4 pública.</p> <h2 id="configuracion-de-entorno-virtual-ubuntu"><a href="#configuracion-de-entorno-virtual-ubuntu" class="header-anchor">#</a> Configuración de entorno virtual Ubuntu</h2> <p>Se ingresó a la máquina virtual a través de putty con el uso de una llave par de claves .PPK, se actualizó el sistema operativo y se instaló java 11.</p> <div class="language- extra-class"><pre class="language-text"><code>    sudo apt-get update 
+    sudo apt-get install openjdk-11-jdk
+</code></pre></div><h2 id="uso-de-systemd-service-para-deploy-de-app-spring-boot"><a href="#uso-de-systemd-service-para-deploy-de-app-spring-boot" class="header-anchor">#</a> Uso de Systemd Service para deploy de app spring boot</h2> <p>Se utilizó el método de systemd Service para correr la aplicación con un archivo .service.
+El archivo se generó en la ruta &quot;etc/systemd/system/&quot; con el nombre &quot;springstart.service&quot;, el archivo contiene las instrucciones para correr la aplicación spring boot en el puerto 8080.</p> <div class="language- extra-class"><pre class="language-text"><code>    /*service deploy*/
+    sudo nano /etc/systemd/system/springstart.service
+
+    [Unit]
+    Description=Api Tienda BSale
+    After=syslog.target
+
+    [Service]
+    User=ubuntu
+    ExecStart=/usr/bin/java -jar -Dspring.profiles.active=aws -Dserver.port=8080 /home/ubuntu/app.jar
+    SuccessExitStatus=143
+
+    [Install]
+    WantedBy=multi-user.target
+</code></pre></div><h2 id="activacion-y-monitoreo-de-logs-y-la-aplicacion"><a href="#activacion-y-monitoreo-de-logs-y-la-aplicacion" class="header-anchor">#</a> Activación y Monitoreo de logs, y la aplicación</h2> <p>Para activar y dar seguimiento a los logs de la aplicación o al status del servicio se tiene los siguientes comandos.</p> <div class="language- extra-class"><pre class="language-text"><code>    sudo systemctl enable springstart.service
+    sudo systemctl status springstart
+    sudo systemctl start springstart
+    sudo journalctl -f -u springstart
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation.github.io/api/sql-inyection.html" class="prev">
+        Prevenir Sql Inyection
+      </a></span> <span class="next"><a href="/documentation.github.io/api/uso-api.html">
+        Uso de la API
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation.github.io/assets/js/app.c9d3f325.js" defer></script><script src="/documentation.github.io/assets/js/2.7e8b5cf7.js" defer></script><script src="/documentation.github.io/assets/js/10.96269606.js" defer></script>
+  </body>
+</html>
